@@ -1,0 +1,12 @@
+language: rust
+
+rust:
+  - stable
+
+env:
+  global:
+    - LIBRARY_PATH=lib64
+    - LD_LIBRARY_PATH=lib64
+
+script:
+  - cargo test --verbose
