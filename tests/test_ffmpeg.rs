@@ -116,8 +116,4 @@ fn test_decode_audio() {
 
     let pcm = audio_stream.get_audio_data(1, 16000).unwrap();
     assert_eq!(expected_size, pcm.len());
-
-    audio_stream.seek_by_frame(0).unwrap();
-    let pcm = audio_stream.get_audio_data(1, 8000).unwrap();
-    assert_eq!(expected_size / 2, pcm.len());
 }

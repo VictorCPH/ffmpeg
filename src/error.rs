@@ -26,7 +26,7 @@ impl Error for FFmpegError {
 impl FFmpegError {
     pub fn new(code: i32, desc: &str) -> Self {
         let desc = desc.to_string();
-        let mut detail: String;
+        let detail: String;
         if code == AVERROR_EOF {
             detail = "AV_EOF".to_string();
         } else {
